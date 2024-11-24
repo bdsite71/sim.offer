@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Operators</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            margin: 0;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Container styling */
+        .app-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Live Chat Button styling */
+        .live-chat-button {
+            background-color: #28a745;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .live-chat-button:hover {
+            background-color: #218838;
+        }
+
+        /* Title */
+        .app-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .operator-button {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: left;
+            font-size: 18px;
+            color: #333333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .operator-button img {
+            width: 35px;
+            height: 35px;
+            margin-right: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .operator-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #e0e0e0, #ffffff);
+        }
+
+        /* Live chat icon styling */
+        .live-chat-icon {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Title -->
+        <div class="app-title">Select SIM Operators</div>
+
+        <!-- Operator Buttons -->
+        <div class="button-container">
+            <button class="operator-button" onclick="handleClick('https://wa.me/8801889812208')">
+                <img src="https://i.ibb.co/Njz5kVS/banglalink-bangladesh-mobile-phones-sms-subscriber-identity-module-banglalink-7068874992f66b40a8a12b.png" alt="Banglalink Logo">
+                Banglalink
+            </button>
+
+            <button class="operator-button" onclick="handleClick('https://wa.me/8801779122567')">
+                <img src="https://i.ibb.co/LptNT4x/telecommunications-in-bangladesh-teletalk-telecommunications-in-bangladesh-robi-axiata-limited-other.png" alt="Teletalk Logo">
+                Teletalk
+            </button>
+
+            <button class="operator-button" onclick="handleClick('https://brillianttopup.github.io/Check-/')">
+                <img src="https://i.ibb.co.com/KzGfJx1/Grameenphone-Logo-GP-Logo-svg.png" alt="Grameenphone Logo">
+                Grameenphone
+            </button>
+
+            <button class="operator-button" onclick="handleClick('https://wa.me/8801303084842')">
+                <img src="https://i.ibb.co/SJ2B6Jr/4g-bharti-airtel-lte-3g-2g-recharge-e21297cb17086dc2e555b0f396b7fdd9.png" alt="Airtel Logo">
+                Airtel
+            </button>
+
+            <button class="operator-button" onclick="handleClick('https://wa.me/8801670081571')">
+                <img src="https://i.ibb.co/0Zvwk2L/airtel-bangladesh-robi-axiata-limited-mobile-phones-bharti-airtel-banglalink-a49951f3bf157c367c7be5e.png" alt="Robi Logo">
+                Robi
+            </button>
+        </div>
+    </div>
+
+    <!-- Live Chat Button (Outside Container) -->
+    <button class="live-chat-button" onclick="handleLiveChat()">
+        <img src="https://i.ibb.co/5rL22Fq/helpdesk.gif" alt="Helpdesk Icon" class="live-chat-icon">
+        Live Chat
+    </button>
+
+    <script>
+        function handleClick(url) {
+            window.location.href = url;
+        }
+
+        function handleLiveChat() {
+            window.location.href = "https://wa.me/8801581050857";
+        }
+    </script>
+</body>
+</html>
