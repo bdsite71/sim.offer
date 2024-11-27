@@ -31,7 +31,14 @@
         }
 
         /* Live Chat Button styling */
-        .live-chat-button {
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .button-row button {
             background-color: #28a745;
             color: #ffffff;
             font-size: 18px;
@@ -40,16 +47,20 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            width: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s ease;
-            margin: 20px 0;
         }
 
-        .live-chat-button:hover {
+        .button-row button:hover {
             background-color: #218838;
+        }
+
+        .button-row button img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
         }
 
         /* Title */
@@ -98,13 +109,6 @@
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
             background: linear-gradient(135deg, #e0e0e0, #ffffff);
         }
-
-        /* Live chat icon styling */
-        .live-chat-icon {
-            width: 25px;
-            height: 25px;
-            margin-right: 10px;
-        }
     </style>
 </head>
 <body>
@@ -142,15 +146,17 @@
         </div>
     </div>
 
-    <!-- Live Chat Button (Outside Container) -->
-    <button class="live-chat-button" onclick="handleLiveChat()">
-        <img src="https://i.ibb.co/5rL22Fq/helpdesk.gif" alt="Helpdesk Icon" class="live-chat-icon">
-        Live Chat
-    </button>
-    <button onclick="handleHowToBuy()">
+    <!-- Live Chat Button and 'কিভাবে কিনবো' Button -->
+    <div class="button-row">
+        <button onclick="handleLiveChat()">
+            <img src="https://i.ibb.co/5rL22Fq/helpdesk.gif" alt="Helpdesk Icon">
+            Live Chat
+        </button>
+        <button onclick="handleHowToBuy()">
             <img src="https://i.ibb.co/5rL22Fq/helpdesk.gif" alt="Helpdesk Icon">
             কিভাবে কিনবো
-    </button>
+        </button>
+    </div>
 
     <script>
         function handleClick(url) {
@@ -160,10 +166,10 @@
         function handleLiveChat() {
             window.location.href = "https://wa.me/8801581050857";
         }
+
         function handleHowToBuy() {
             window.location.href = "https://streamable.com/a3p4pg";
         }
-        
     </script>
 </body>
 </html>
